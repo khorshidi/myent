@@ -3,13 +3,15 @@ package com.taher.myent.myentengine.controller;
 import com.taher.myent.myentengine.Event;
 import com.taher.myent.myentengine.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author Taher Khorshidi
  */
-@RestController(value = "/events")
+@RepositoryRestController
+@RequestMapping(value = "/events")
 public class EventController {
 
     private final EventService eventService;
